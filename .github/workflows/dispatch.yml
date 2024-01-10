@@ -1,0 +1,19 @@
+name: Trigger Carma-Carla Integration Build
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  trigger-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Dockerhub Workflow on Carma-Carla-Integration
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.CARMA_CARLA_INTEGRATION_PAT }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/SaikrishnaBairamoni/carma-carla-integration/actions/workflows/dockerhub.yml/dispatches \
+            -d '{"ref":"develop"}'
+            
