@@ -1,7 +1,6 @@
 name: Trigger Carma-Carla Integration Build
 
-# This workflow triggers on every push to the 'develop' and 'master' branches
-on:
+# This workflow triggers on every push to the 'develop' and 'master' branches 
   push:
     branches:
       - develop
