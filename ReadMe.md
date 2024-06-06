@@ -78,7 +78,6 @@ To account for inaccuracies in these calculations due to beam spreading at large
 to the threshold. The nominal threshold and scaling parameters are configurable.
 
 ### Noise Model
-
 The noise model applies adjustments to the output data including positions, orientations, and whether the object has
 been detected.
 
